@@ -1,0 +1,16 @@
+{
+    "name": "MAC Developer",
+    "short_name": "MAC Dev",
+    "description": "Progresive Web Apps MAC Dev",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#039be5",
+    "theme_color": "#039be5",
+    "icons": [
+        {
+            "src": "images/icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+
+    <!-- Import Custom Css -->
+    <link rel="stylesheet" href="materialize/css/style.css" type="text/css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#039be5"/>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="nav blue" role="navigation">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo" id="logo-container">MAC Dev</a>
+            <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
+            <ul class="topnav right hide-on-med-and-down"></ul>
+            <ul class="sidenav" id="nav-mobile"></ul>
+        </div>
+    </nav>
+    <!-- END Navbar -->
+
+    <div id="body-content"></div>
+
+    <script>
+        // REGISTER SERVICE WORKER
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function () {
+                navigator.serviceWorker
+                    .register("/services-worker.js")
+                    .then(function () {
+                        console.log("Pendaftaran Service Worker Berhasil");
+                    })
+                    .catch(function () {
+                        console.log("Pendaftran Service Worker Gagal ");
+                    });
+            });
+        } else {
+            console.log("Service Worker belum di dukung di browser ini.");
+        }
+
+
+    </script>
+
+
+    <!--Javascript Materialize-->
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="materialize/js/nav.js" type="text/javascript"></script>
+</body>
+
+</html>
